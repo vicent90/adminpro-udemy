@@ -16,7 +16,6 @@ export class BreadcrumbsComponent implements OnInit {
                private meta: Meta) {
 
     this.getDataRoute().subscribe( data => {
-      console.log( event );
       this.titulo = data.titulo;
       this.title.setTitle( this.titulo );
 
@@ -29,14 +28,14 @@ export class BreadcrumbsComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
-
   getDataRoute() {
     return this.router.events.pipe(
       filter( evento => evento instanceof ActivationEnd),
       filter( (evento: ActivationEnd) => evento.snapshot.firstChild === null ),
       map( (evento: ActivationEnd) => evento.snapshot.data )
     );
+  }
+
+  ngOnInit() {
   }
 }
