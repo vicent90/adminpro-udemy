@@ -9,11 +9,13 @@ export class ImagenPipe implements PipeTransform {
   transform(img: string, tipo: string = 'usuario'): any {
     let url = URL_SERVICIOS + '/img';
 
+    // Si no tiene ninguna imagen cargada
     if ( !img ) {
       return url + '/usuarios/xxx';
     }
 
-    if ( img.indexOf('https') > 0 ) {
+    // Si el usuario es de google
+    if ( img.indexOf('https') >= 0 ) {
       return img;
     }
 
