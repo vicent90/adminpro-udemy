@@ -4,6 +4,7 @@ import { SettingsService, SidebarService, SharedService, UsuarioService } from '
 import { HttpClientModule } from '@angular/common/http';
 import { LoginGuardGuard } from './guards/login-guard.guard';
 import { ModalUploadService } from '../components/modal-upload/modal-upload.service';
+import { HospitalService } from './hospital/hospital.service';
 
 
 
@@ -18,6 +19,7 @@ import { ModalUploadService } from '../components/modal-upload/modal-upload.serv
     SidebarService,
     SharedService,
     UsuarioService,
+    HospitalService,
     ModalUploadService,
     LoginGuardGuard
   ]

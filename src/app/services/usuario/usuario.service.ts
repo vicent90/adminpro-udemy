@@ -3,7 +3,7 @@ import { Usuario } from '../../models/usuario.model';
 import { HttpClient } from '@angular/common/http';
 import { URL_SERVICIOS } from '../../config/config';
 import { map } from 'rxjs/operators';
-import { Router, GuardsCheckStart } from '@angular/router';
+import { Router } from '@angular/router';
 import { SubirArchivoService } from '../subir-archivo/subir-archivo.service';
 import swal from 'sweetalert';
 
@@ -123,11 +123,7 @@ export class UsuarioService {
   buscarUsuarios( termino: string ) {
     const url = URL_SERVICIOS + '/busqueda/coleccion/usuarios/' + termino;
     return this.http.get( url )
-            .pipe(map( (resp: any) => {
-              resp = resp.usuarios;
-              console.log(resp);
-            })
-            );
+            .pipe(map( (resp: any) => resp.usuarios));
   }
 
   borrarUsuario ( id: string ) {
