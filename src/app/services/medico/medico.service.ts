@@ -47,7 +47,7 @@ export class MedicoService {
       // Actualizando
       url += '/' + medico._id + '?token=' + this._usuarioService.token;
       return this.http.put( url, medico )
-                    .pipe( map( resp => {
+                    .pipe( map( (resp: any) => {
                       swal('Medico Actualizado', resp.medico.nombre, 'success');
                       return resp.medico;
       }));
@@ -55,7 +55,7 @@ export class MedicoService {
       // Creando
       url += '?token=' + this._usuarioService.token;
       return this.http.post( url, medico )
-                    .pipe( map( resp => {
+                    .pipe( map( (resp: any) => {
                       swal('Medico Creado', resp.medico.nombre, 'success');
                       return resp.medico;
       }));
@@ -68,7 +68,7 @@ export class MedicoService {
   cargarMedico( id: string) {
     const url = URL_SERVICIOS + '/medico/' + id;
     return this.http.get( url )
-            .pipe( map( resp => resp.medico));
+            .pipe( map( (resp: any) => resp.medico));
   }
 
 }
