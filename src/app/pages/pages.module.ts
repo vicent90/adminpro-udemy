@@ -31,7 +31,7 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
         DashboardComponent,
         ProgressComponent,
         Grafica1Component,
-        PagesComponent,
+        // PagesComponent,
         AccountSettingsComponent,
         IncrementadorComponent,
         GraficoDonaComponent,
@@ -39,7 +39,7 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
         RxjsComponent,
         ProfileComponent,
         UsuariosComponent,
-        ModalUploadComponent,
+        // ModalUploadComponent,
         HospitalesComponent,
         MedicosComponent,
         MedicoComponent,
@@ -48,8 +48,8 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
     exports: [
         DashboardComponent,
         ProgressComponent,
-        Grafica1Component,
-        PagesComponent
+        Grafica1Component
+        // PagesComponent
     ],
     imports: [
         CommonModule,
